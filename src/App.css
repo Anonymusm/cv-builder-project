@@ -1,0 +1,172 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.container {
+  width: 800px; /* 1200px може бути забагато для простої форми */
+  min-height: 600px;
+  background-color: #fff;
+  padding: 40px;
+  margin: 0 auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1); /* Додасть об'єму */
+display: flex;
+  flex-direction: column;
+  align-items: center; /* Центрує заголовок і форму по горизонталі */
+}
+
+button:disabled {
+  background-color: #cccccc; /* Стає сірою */
+  color: #666666;            /* Текст блідне */
+  cursor: not-allowed;       /* Курсор показує знак "заборонено" */
+  opacity: 0.6;              /* Напівпрозорість */
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.next__btn, .back__btn {
+  background-color: #351818; /* Основний колір */
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.next__btn:hover, .back__btn:hover {
+  background-color: #4a2222; /* Трохи світліший при наведенні */
+}
+
+button {
+  background-color: #351818;
+}
+
+.next__btn:hover, .back__btn:hover {
+  opacity: 0.8;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.wrapper {
+  width: 200px;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.wr__title {
+  font-size: 14px;
+}
+
+.btn__wrapper {
+  display: flex;
+  justify-content: space-between; 
+  width: 100%;
+  max-width: 400px;
+  margin: 30px auto 0 auto;
+}
+
+/* Якщо кнопки Back немає, посуваємо Next вправо */
+.btn__wrapper {
+  display: flex;
+}
+
+/* Видаляємо старий margin-left: 180% і замінюємо на цей селектор */
+.next__btn {
+  margin-left: auto; /* Це автоматично притисне кнопку вправо, якщо вона одна */
+}
+
+/* Якщо кнопка Back є, вона просто стоятиме зліва від Next */
+.back__btn {
+  margin-right: 10px; 
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 400px; /* Форма не повинна бути ширшою за інпути */
+}
+
+.textarea {
+  width: 250px;
+  height: 125px;
+  resize: none;
+  margin: 0 auto;
+}
+
+input[type="date"] {
+  padding: 10px;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  color: #333;
+  outline: none;
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Текст лейбла буде зліва над інпутом */
+  font-weight: 600;
+  font-size: 14px;
+  color: #444;
+}
+
+input, textarea {
+  width: 100%; /* Заповнює батьківський контейнер */
+  max-width: 400px; /* Але не більше 400px, щоб не виглядати розтягнуто */
+  margin: 5px 0 15px 0;
+  padding: 10px; /* Більше простору всередині для тексту */
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  transition: border-color 0.2s;
+}
+
+input:focus, textarea:focus {
+  border-color: #646cff; /* Колір з твого логотипу */
+  outline: none;
+}
